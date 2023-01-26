@@ -22,7 +22,7 @@ public class DisjointSetsShort {
                     System.out.println(leader[s] == leader[t] ? 1 : 0);
                     break;
                 case 1:
-                    u(s, t);
+                    union(s, t);
                     break;
                 case 2:
                     leader[s] = leader[t];
@@ -30,7 +30,7 @@ public class DisjointSetsShort {
             }
         }
     }
-    static void u(int s,int t){
+    static void union(int s,int t){
         int sLeader = leader[s];
         int tLeader = leader[t];
 
