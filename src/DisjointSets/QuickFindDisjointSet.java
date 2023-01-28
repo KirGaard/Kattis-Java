@@ -2,16 +2,14 @@ package DisjointSets;
 
 import edu.princeton.cs.algs4.*;
 
-import java.util.Arrays;
-
-public class DisjointSets {
+public class QuickFindDisjointSet {
 
     int[] leader;
 
     public static void main(String[] args){
 
         int singletons = StdIn.readInt();
-        DisjointSets set = new DisjointSets(singletons);
+        QuickFindDisjointSet set = new QuickFindDisjointSet(singletons);
 
         int max = StdIn.readInt();
         for (int i = 0; i < max; i++){
@@ -33,7 +31,7 @@ public class DisjointSets {
         }
     }
 
-    public DisjointSets(int n){
+    public QuickFindDisjointSet(int n){
         leader = new int[n];
         for (int i = 0; i < n; i++) {
             leader[i] = i;
@@ -59,7 +57,7 @@ public class DisjointSets {
         leader[s] = root;
     }
 
-    static void query(int s, int t, DisjointSets set){
+    static void query(int s, int t, QuickFindDisjointSet set){
         StdOut.println(set.find(s) == set.find(t) ? 1 : 0);
     }
 }

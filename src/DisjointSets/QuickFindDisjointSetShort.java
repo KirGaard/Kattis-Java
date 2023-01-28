@@ -2,7 +2,7 @@ package DisjointSets;
 
 import java.util.*;
 
-public class DisjointSetsShort {
+public class QuickFindDisjointSetShort {
     static int[] leader;
     public static void main(String[]a){
         Scanner scanner = new Scanner(System.in);
